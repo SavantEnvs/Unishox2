@@ -1,0 +1,10 @@
+project: savantenvs/unishox2
+# Backport target: reproduces mayhemheroes/unishox2 target unicode-fuzzer run 2 at UPSTREAM
+# 7c90b52f4d17863785d42fba021b4adbc5cfc443. Suffixed so it sits beside the live target without
+# being fuzzed by anything but a manual dispatch of this branch.
+target: unicode-fuzzer-buggy-mhh-run-2
+# origin: https://app.mayhem.security/mayhemheroes/unishox2/unicode-fuzzer/2
+
+cmds:
+  - cmd: /mayhem/unicode-fuzzer
+    libfuzzer: true
